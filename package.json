@@ -1,0 +1,27 @@
+{
+  "name": "vue-pwd-input",
+  "version": "1.0.0",
+  "description": "a password plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://dlt1111@github.com/dlt1111/vue-pwd-input.git"
+  },
+  "keywords": [
+    "vue",
+    "password",
+    "input"
+  ],
+  "author": "dlt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dlt1111/vue-pwd-input/issues"
+  },
+  "homepage": "https://github.com/dlt1111/vue-pwd-input#readme",
+  "peerDependencies": {
+    "vue": "^2.5.13"
+  }
+}
