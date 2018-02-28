@@ -25,7 +25,7 @@ Vue.use(PwdInput)
 
 ```html
 <template>
-  <pwd-input @blur="pwdBlur"></pwd-input>
+  <pwd-input :max-length="6" ref="pwd" @blur="pwdBlur"></pwd-input>
 </template>
 ```
 ```javascript
@@ -38,11 +38,10 @@ Vue.use(PwdInput)
   methods: {
     pwdBlur (password) {
       this.password = password            // get input password
+    },
+    clear () {
+      this.$refs.pwd.clear()              // clear input
     }
   }
 </script>
 ```
-#### if need MD5
-
-```html
-<pwd-input :has-md5="true"></pwd-input>

@@ -4,7 +4,7 @@
             class="input"
             type="tel"
             v-model="inputVal"
-            maxlength="6"
+            :maxlength="maxLength"
             ref="input"
             @blur="blurInput"
         >
@@ -14,24 +14,18 @@
     </div>
 </template>
 <script>
-// import MD5 from 'js-md5'
 export default {
     name: 'pwd-input',
     props: {
-        hasMd5: {
-            type: Boolean,
-            default: false
+        maxLength: {
+            type: Number,
+            default: 6
         }
     },
     data () {
         return {
-            pwdList: new Array(6).fill(''),
+            pwdList: new Array(this.maxLength).fill(''),
             inputVal: ''
-        }
-    },
-    mounted () {
-        if (this.hasMd5) {
-            this.MD5 = require('js-md5')
         }
     },
     methods: {
@@ -39,18 +33,13 @@ export default {
             this.$refs.input.focus()
         },
         blurInput () {
-            if (this.pwdList[5] !== '') {
-                let pwd
-                if (this.hasMd5) {
-                    pwd = this.MD5(this.pwdList)
-                } else {
-                    pwd = this.pwdList
-                }
+            if (this.pwdList[this.maxLength-1] !== '') {
+                let pwd = this.pwdList
                 this.$emit('blur', pwd)
             }
         },
         clear () {
-            this.pwdList = new Array(6).fill('')
+            this.pwdList = new Array(this.maxLength).fill('')
             this.inputVal = ''
         }
     },
