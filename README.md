@@ -1,5 +1,5 @@
 # vue-pwd-input
-vue密码输入框插件 a password plugin
+vue密码输入框插件| a password plugin
 
 <img src="https://raw.githubusercontent.com/dlt1111/vue-pwd-input/master/example/m_exp.jpg" width="200" height="300">
 
@@ -34,7 +34,7 @@ Vue.use(PwdInput)
     return {
       password: ''
     }
-  }
+  },
   methods: {
     pwdBlur (password) {
       this.password = password            // get input password

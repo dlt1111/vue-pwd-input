@@ -1,6 +1,6 @@
 {
   "name": "vue-pwd-input",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a password plugin",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,11 @@
   "keywords": [
     "vue",
     "password",
-    "input"
+    "input",
+    "mobile",
+    "md5",
+    "plugin",
+    "component"
   ],
   "author": "dlt",
   "license": "ISC",
@@ -22,6 +26,7 @@
   },
   "homepage": "https://github.com/dlt1111/vue-pwd-input#readme",
   "peerDependencies": {
-    "vue": "^2.5.13"
+    "vue": "^2.5.13",
+    "js-md5": "^0.7.3"
   }
 }
