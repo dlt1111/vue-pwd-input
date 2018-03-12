@@ -1,6 +1,6 @@
 {
   "name": "vue-pwd-input",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "a password plugin",
   "main": "index.js",
   "scripts": {
@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/dlt1111/vue-pwd-input#readme",
   "peerDependencies": {
-    "vue": "^2.5.13"
+    "vue": "^2.0.0"
   }
 }

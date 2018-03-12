@@ -8,7 +8,7 @@
             ref="input"
             @blur="blurInput"
         >
-        <div class="block-box" @click="changeFocus">
+        <div class="block-box" @click="focusInput">
             <div class="block" v-for="(pwd,index) in pwdList" :key="index">{{pwd}}</div>
         </div>
     </div>
@@ -29,7 +29,7 @@ export default {
         }
     },
     methods: {
-        changeFocus () {
+        focusInput () {
             this.$refs.input.focus()
         },
         blurInput () {
