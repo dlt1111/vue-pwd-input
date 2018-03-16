@@ -7,6 +7,7 @@
             :maxlength="maxLength"
             ref="input"
             @blur="blurInput"
+            @input="listenInput"
         >
         <div class="block-box" @click="focusInput">
             <div class="block" v-for="(pwd,index) in pwdList" :key="index">{{pwd}}</div>
@@ -41,6 +42,9 @@ export default {
         clear () {
             this.pwdList = new Array(this.maxLength).fill('')
             this.inputVal = ''
+        },
+        listenInput () {
+            this.$emit('listenInput', this.inputVal)
         }
     },
     watch: {

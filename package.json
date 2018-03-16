@@ -1,6 +1,6 @@
 {
   "name": "vue-pwd-input",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "a password plugin",
   "main": "index.js",
   "scripts": {

@@ -26,7 +26,7 @@ Vue.use(PwdInput);
 
 ```html
 <template>
-  <pwd-input :max-length="6" ref="pwd" @blur="pwdBlur"></pwd-input>
+  <pwd-input :max-length="6" ref="pwd" @blur="pwdBlur" @listenInput="listenInput"></pwd-input>
 </template>
 ```
 
@@ -41,6 +41,9 @@ Vue.use(PwdInput);
     pwdBlur (password) {
       this.password = password            // get input password
     },
+    listenInput (val) {
+      console.log(val)                    // get input password
+    }
     pwdFocus () {
       this.$refs.pwd.focusInput()
     },
