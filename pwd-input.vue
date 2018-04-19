@@ -30,8 +30,14 @@ export default {
         }
     },
     methods: {
-        focusInput () {
+        focus () {
             this.$refs.input.focus()
+        },
+        blur () {
+            this.$refs.input.blur()
+        },
+        focusInput () {
+            this.focus()
         },
         blurInput () {
             if (this.pwdList[this.maxLength-1] !== '') {

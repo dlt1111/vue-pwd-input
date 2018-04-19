@@ -43,9 +43,12 @@ Vue.use(PwdInput);
     },
     listenInput (val) {
       console.log(val)                    // get input password
-    }
+    },
     pwdFocus () {
       this.$refs.pwd.focusInput()
+    },
+    blur () {
+      this.$refs.pwd.blur()               // blur
     },
     clear () {
       this.$refs.pwd.clear()              // clear input
